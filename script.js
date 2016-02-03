@@ -1,6 +1,5 @@
 var userPoint = 0;
 var faceUp = [];
-var assignments = 1;
 var divIds = [];
 var matches = 0;
 
@@ -8,7 +7,14 @@ function fillBoard() {
   //TODO: randomly assign positions to the tiles on the screen call
   // addTileToBoard here
   // Hint: You can use a forEach or a for loop
-
+  
+var ray = ["cat", "dog","mice"]
+var ray = ["cat", "dog","mice"]
+  for (var i = 0; i<3; i++) {
+    for (var i = 0; i<3; i++) {
+    addTileToBoard(ray[i])
+  }
+  }
 };
 
 function shuffle(array) {
@@ -30,9 +36,8 @@ function shuffle(array) {
 
 function addTileToBoard(element) {
   //TODO: randomly assign ids to the divs
-  var div =  "<div id=\"" + assignments +"\" class=\""+ element + " token\"></div>";
+  var div =  "<div id=\"\" class=\""+ element + " token\"></div>";
   $(".game").append(div);
-  assignments ++
 };
 
 function clearBoard() {
